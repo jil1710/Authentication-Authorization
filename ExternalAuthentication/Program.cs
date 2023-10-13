@@ -21,18 +21,18 @@ namespace ExternalAuthentication
             builder.Services.AddAuthentication().AddGoogle("google", option =>
             {
 
-                option.ClientId = "1050251688234-paaoghhlh1hg9e8h85kj7iei0a8k2b9d.apps.googleusercontent.com";
-                option.ClientSecret = "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";
+                option.ClientId = "xxxxxxxxxx";
+                option.ClientSecret = "xxxxxxxx";
             }).AddGitHub(option =>
             {
-                option.ClientId = "27c7959559c86d9bd134";
-                option.ClientSecret = "027eeb92c6f1e64a5441d9781dc9edb52b671930";
+                option.ClientId = "xxxxxxxx";
+                option.ClientSecret = "xxxxxxxx";
                 option.Scope.Add("user:email");
 
             }).AddFacebook(option =>
             {
-                option.AppId = "251560094320402";
-                option.AppSecret = "3cbe9d3d8e76489e0821e4c47c102321";
+                option.AppId = "xxxxxxxxxx";
+                option.AppSecret = "xxxxxxxxxx";
             });
             var app = builder.Build();
 
