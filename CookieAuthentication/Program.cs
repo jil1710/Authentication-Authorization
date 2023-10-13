@@ -22,7 +22,9 @@ namespace AuthenticationAndAuthorization
                 option.ExpireTimeSpan = TimeSpan.FromMinutes(30);
                 option.EventsType = typeof(CustomCookieAuthenticationEvent);
             });
+
             builder.Services.AddScoped<CustomCookieAuthenticationEvent>();
+
             builder.Services.AddAuthorization(option =>
             {
                 option.AddPolicy("Secret", p =>
