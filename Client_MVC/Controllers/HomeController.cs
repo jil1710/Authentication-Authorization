@@ -31,6 +31,9 @@ namespace Client_MVC.Controllers
 
             var a = new JwtSecurityTokenHandler().ReadJwtToken(accessToken);
             var i = new JwtSecurityTokenHandler().ReadJwtToken(idToken);
+
+            var claim = User.Claims;
+            var claims= HttpContext.User.Claims;
             
             return View();
         }

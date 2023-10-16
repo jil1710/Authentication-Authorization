@@ -22,7 +22,8 @@ namespace Client_MVC
             }).AddCookie("Cookie")
             .AddOpenIdConnect("oidc",config =>
             {
-                config.Authority = "https://localhost:44339/";
+                config.SignInScheme = "Cookie";
+                config.Authority = "https://localhost:44349/";
 
                 config.ClientId = "client_id_mvc";
 
@@ -31,6 +32,8 @@ namespace Client_MVC
                 config.SaveTokens = true;
 
                 config.ResponseType = "code";
+
+                config.Scope.Add("RoleClaim");
 
                 
 
